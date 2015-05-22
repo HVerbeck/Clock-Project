@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>
+			Cool Project
+		</title>
+	<link rel="stylesheet" type="css" href="project.css">
+	</head>
+	<div class = mainDiv>
+		<body onload="startTime()">
+			<h1 class = fancyFont>Pretty Website</h1>
+			<p class = arialFont>This is arial</p>
+			<h3>This is ariel</h3>
+			
+			<img src=https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTGquyAX6RM36zE6NZRe2Nv_5yaZaf7KcIuXk5nS5BXn7BodRM0>
+			<button onclick="myButton()">Try it</button>
+			<p id="demo"></p>
+			<script>
+			function startTime() {
+    			var today=new Date();
+    			var h=today.getHours();
+    			var m=today.getMinutes();
+    			var s=today.getSeconds();
+    			m = checkTime(m);
+   	 			s = checkTime(s);
+    			document.getElementById('txt').innerHTML = h+":"+m+":"+s;
+    			var t = setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i) {
+    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+		</body>
+
+	</div>
+</html>
